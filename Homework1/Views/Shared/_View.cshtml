@@ -1,0 +1,33 @@
+﻿@model List<Homework1.Models.MyClass>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <tbody>
+                <tr>
+                    <th>#</th>
+                    <th>類別</th>
+                    <th>日期</th>
+                    <th>金額</th>
+                </tr>
+                @{
+                    int a = 0;
+                    foreach (var item in Model)
+                    {
+                        a++;
+
+                        <tr>
+                            <th>@a</th>
+                            <th>@item.category</th>
+                            <th>@item.date</th>
+                            <th>@item.money</th>
+
+                        </tr>
+
+                    }
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
